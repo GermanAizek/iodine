@@ -47,7 +47,7 @@
 
 int dnsc_use_edns0 = 1;
 
-#define CHECKLEN(x) if (buflen < (x) + (unsigned)(p-buf))  return 0
+#define CHECKLEN(x) if (buflen < (x) + (size_t)(p-buf))  return 0
 
 int dns_encode(char *buf, size_t buflen, struct query *q, qr_t qr,
 	       const char *data, size_t datalen)
